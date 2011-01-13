@@ -48,7 +48,7 @@ class ModuleQRCode extends Module
 		
 		$this->Template->size = ($this->qrcode_size * 25) + (2 * $this->qrcode_size * $this->qrcode_margin);
 		$this->Template->alt = str_replace("\n", " ", $this->qrcode);
-		$this->Template->qrcode = QRCodeGenerator::generate($this->replaceInsertTags($this->qrcode), $this->qrcode_eclevel, $this->qrcode_size, $this->qrcode_margin);	}
+		$this->Template->qrcode = QRCodeGenerator::generate($this->replaceInsertTags($this->qrcode), $this->qrcode_ecclevel, $this->qrcode_size, $this->qrcode_margin);	}
 }
 
 ?>

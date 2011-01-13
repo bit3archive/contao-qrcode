@@ -31,9 +31,18 @@
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_module']['qrcode']         = array('Text', 'Bitte geben Sie den Text für den QR Code ein.');
-$GLOBALS['TL_LANG']['tl_module']['qrcode_size']    = array('Größe', 'Bitte wählen Sie die Größe des QR Code.');
-$GLOBALS['TL_LANG']['tl_module']['qrcode_margin']  = array('Rahmen', 'Bitte wählen Sie die Größe des Randes um den QR Code.');
-$GLOBALS['TL_LANG']['tl_module']['qrcode_eclevel'] = array('Feinheitsgrad', 'Bitte wählen Sie den Feinheitsgrad des QR Code.');
+$GLOBALS['TL_LANG']['tl_module']['qrcode']          = array('Text', '');
+$GLOBALS['TL_LANG']['tl_module']['qrcode_size']     = array('Size', '');
+$GLOBALS['TL_LANG']['tl_module']['qrcode_margin']   = array('Border', '');
+$GLOBALS['TL_LANG']['tl_module']['qrcode_ecclevel'] = array('Error Correction capacity', '');
+
+
+/**
+ * References
+ */
+$GLOBALS['TL_LANG']['tl_module']['qrcode_ecclevels']['L'] = 'Log';
+$GLOBALS['TL_LANG']['tl_module']['qrcode_ecclevels']['M'] = 'Good';
+$GLOBALS['TL_LANG']['tl_module']['qrcode_ecclevels']['Q'] = 'Very good';
+$GLOBALS['TL_LANG']['tl_module']['qrcode_ecclevels']['H'] = 'High';
 
 ?>

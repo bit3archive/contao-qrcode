@@ -37,6 +37,6 @@ $GLOBALS['TL_LANG']['MOD']['qrcode'] = 'QR Code';
 /**
  * Front end modules
  */
-$GLOBALS['TL_LANG']['FMD']['qrcode'] = array('QR Code', 'QR Code Generator.');
+$GLOBALS['TL_LANG']['FMD']['qrcode'] = array('QR Code', 'QR Code generator.');
 
 ?>

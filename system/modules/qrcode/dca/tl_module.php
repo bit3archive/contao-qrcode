@@ -31,7 +31,7 @@
 /**
  * Add palettes to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['qrcode'] = '{title_legend},name,type,headline,qrcode,qrcode_size,qrcode_margin,qrcode_eclevel;{protected_legend:hide},protected;{expert_legend:hide},guests';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['qrcode'] = '{title_legend},name,type,headline,qrcode,qrcode_size,qrcode_margin,qrcode_ecclevel;{protected_legend:hide},protected;{expert_legend:hide},guests';
 
 /**
  * Add fields to tl_module
@@ -55,11 +55,12 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['qrcode_margin'] = array(
 	'options'                 => array('0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40'),
 	'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50')
 );
-$GLOBALS['TL_DCA']['tl_module']['fields']['qrcode_eclevel'] = array(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['qrcode_eclevel'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['qrcode_ecclevel'] = array(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['qrcode_ecclevel'],
 	'default'                 => '0',
 	'inputType'               => 'select',
 	'options'                 => array('L','M','Q','H'),
+	'reference'               => &$GLOBALS['TL_LANG']['tl_module']['qrcode_ecclevels'],
 	'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50')
 );
 

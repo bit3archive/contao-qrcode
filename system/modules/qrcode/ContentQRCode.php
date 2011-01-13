@@ -57,7 +57,7 @@ class ContentQRCode extends ContentElement
 		$this->Template->alt = specialchars($this->alt);
 		$this->Template->fullsize = $this->fullsize ? true : false;
 		$this->Template->margin = $this->generateMargin(deserialize($this->imagemargin), 'margin');
-		$this->Template->qrcode = QRCodeGenerator::generate($this->replaceInsertTags($this->qrcode), $this->qrcode_eclevel, $this->qrcode_size, $this->qrcode_margin);
+		$this->Template->qrcode = QRCodeGenerator::generate($this->replaceInsertTags($this->qrcode), $this->qrcode_ecclevel, $this->qrcode_size, $this->qrcode_margin);
 		
 		// Image link
 		if (strlen($this->imageUrl) && TL_MODE == 'FE')

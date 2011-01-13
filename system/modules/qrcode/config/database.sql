@@ -14,7 +14,7 @@
 CREATE TABLE `tl_module` (
   `qrcode` text NULL,
   `qrcode_size` int(2) NOT NULL default '3',
-  `qrcode_eclevel` char(1) NOT NULL default 'L',
+  `qrcode_ecclevel` char(1) NOT NULL default 'L',
   `qrcode_margin` int(2) NOT NULL default '4',
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -27,6 +27,6 @@ CREATE TABLE `tl_module` (
 CREATE TABLE `tl_content` (
   `qrcode` text NULL,
   `qrcode_size` int(2) NOT NULL default '3',
-  `qrcode_eclevel` char(1) NOT NULL default 'L',
+  `qrcode_ecclevel` char(1) NOT NULL default 'L',
   `qrcode_margin` int(2) NOT NULL default '4',
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

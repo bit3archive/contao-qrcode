@@ -31,6 +31,6 @@
 /**
  * Miscellaneous
  */
-$GLOBALS['TL_LANG']['CTE']['qrcode'] = array('QR Code', 'QR Code Generator.');
+$GLOBALS['TL_LANG']['CTE']['qrcode'] = array('QR Code', 'QR Code generator.');
 
 ?>
