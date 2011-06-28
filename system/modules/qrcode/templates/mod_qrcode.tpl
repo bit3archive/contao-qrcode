@@ -7,7 +7,7 @@
 <?php endif; ?>
 
 <div class="image_container">
-	<img src="<?php echo specialchars($this->qrcode); ?>" alt="<?php echo specialchars($this->alt); ?>" width="<?php echo $this->size; ?>" height="<?php echo $this->size; ?>" />
+	<img src="<?php echo specialchars($this->qrcode); ?>" alt="<?php echo specialchars($this->alt); ?>" width="<?php echo $this->width; ?>" height="<?php echo $this->height; ?>" />
 </div>
 
 </div>
