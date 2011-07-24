@@ -44,11 +44,8 @@ class ModuleQRCode extends Module
 	protected $strTemplate = 'mod_qrcode';
 	
 	public function compile() {
-		require_once(TL_ROOT . '/plugins/phpqrcode/qrlib.php');
-		
-		$this->Template->size = ($this->qrcode_size * 25) + (2 * $this->qrcode_size * $this->qrcode_margin);
-		$this->Template->alt = str_replace("\n", " ", $this->qrcode);
-		$this->Template->qrcode = QRCodeGenerator::generate($this->replaceInsertTags($this->qrcode), $this->qrcode_ecclevel, $this->qrcode_size, $this->qrcode_margin);	}
+		QRCodeGenerator::addQRCodeToTemplate($this, $this->Template);
+	}
 }
 
 ?>

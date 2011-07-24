@@ -16,6 +16,11 @@ CREATE TABLE `tl_module` (
   `qrcode_size` int(2) NOT NULL default '3',
   `qrcode_ecclevel` char(1) NOT NULL default 'L',
   `qrcode_margin` int(2) NOT NULL default '4',
+  `alt` varchar(255) NOT NULL default '',
+  `imagemargin` varchar(128) NOT NULL default '',
+  `imageUrl` blob NULL,
+  `fullsize` char(1) NOT NULL default '',
+  `caption` varchar(255) NOT NULL default '',
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------

@@ -44,57 +44,7 @@ class ContentQRCode extends ContentElement
 	protected $strTemplate = 'ce_qrcode';
 	
 	public function compile() {
-		require_once(TL_ROOT . '/plugins/phpqrcode/qrlib.php');
-		
-		if (in_array($this->floating, array('left', 'right')))
-		{
-			$this->Template->floatClass = ' float_' . $this->floating;
-			$this->Template->float = ' float:' . $this->floating . ';';
-		}
-		
-		$size = deserialize($this->size);
-		
-		$this->Template->alt = specialchars($this->alt);
-		$this->Template->fullsize = $this->fullsize ? true : false;
-		$this->Template->margin = $this->generateMargin(deserialize($this->imagemargin), 'margin');
-		$this->Template->qrcode = QRCodeGenerator::generate($this->replaceInsertTags($this->qrcode), $this->qrcode_ecclevel, $this->qrcode_size, $this->qrcode_margin);
-		
-		// Image link
-		if (strlen($this->imageUrl) && TL_MODE == 'FE')
-		{
-			$this->Template->href = $this->imageUrl;
-			$this->Template->attributes = $this->fullsize ? LINK_NEW_WINDOW : '';
-		}
-
-		// Fullsize view
-		elseif ($this->fullsize && TL_MODE == 'FE')
-		{
-			$this->Template->href = $this->Template->qrcode;
-			$this->Template->attributes = ' rel="lightbox"';
-		}
-		
-		if ($size[0] > 0 || $size[1] > 0)
-		{
-			$this->Template->src    = $this->getImage($this->Template->qrcode, $size[0], $size[1], $size[2]);
-			$this->Template->width  = $size[0];
-			$this->Template->height = $size[1];
-			// Image dimensions
-			if (($imgSize = @getimagesize(TL_ROOT .'/'. $this->Template->src)) !== false)
-			{
-				$this->Template->width  = $imgSize[0];
-				$this->Template->height = $imgSize[1];
-			}
-		}
-		else
-		{
-			$this->Template->src   = $this->Template->qrcode;
-			// Image dimensions
-			if (($imgSize = @getimagesize(TL_ROOT .'/'. $this->Template->src)) !== false)
-			{
-				$this->Template->width  = $imgSize[0];
-				$this->Template->height = $imgSize[1];
-			}
-		} 
+		QRCodeGenerator::addQRCodeToTemplate($this, $this->Template);
 	}
 }
 

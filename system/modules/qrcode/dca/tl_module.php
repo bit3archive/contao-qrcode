@@ -28,10 +28,13 @@
  */
 
 
+$this->loadLanguageFile('tl_content');
+$this->loadDataContainer('tl_content');
+
 /**
  * Add palettes to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['qrcode'] = '{title_legend},name,type,headline,qrcode,qrcode_size,qrcode_margin,qrcode_ecclevel;{protected_legend:hide},protected;{expert_legend:hide},guests';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['qrcode'] = '{title_legend},name,type,headline,qrcode,qrcode_size,qrcode_margin,qrcode_ecclevel;{image_legend},alt,imgSize,imagemargin,imageUrl,fullsize,caption;{protected_legend:hide},protected;{expert_legend:hide},guests';
 
 /**
  * Add fields to tl_module
@@ -63,5 +66,10 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['qrcode_ecclevel'] = array(
 	'reference'               => &$GLOBALS['TL_LANG']['tl_module']['qrcode_ecclevels'],
 	'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50')
 );
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['alt']         = $GLOBALS['TL_DCA']['tl_content']['fields']['alt'];
+$GLOBALS['TL_DCA']['tl_module']['fields']['imagemargin'] = $GLOBALS['TL_DCA']['tl_content']['fields']['imagemargin'];
+$GLOBALS['TL_DCA']['tl_module']['fields']['imageUrl']    = $GLOBALS['TL_DCA']['tl_content']['fields']['imageUrl'];
+$GLOBALS['TL_DCA']['tl_module']['fields']['caption']     = $GLOBALS['TL_DCA']['tl_content']['fields']['caption'];
 
 ?>

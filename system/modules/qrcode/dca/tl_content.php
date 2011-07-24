@@ -31,7 +31,7 @@
 /**
  * Add palettes to tl_content
  */
-$GLOBALS['TL_DCA']['tl_content']['palettes']['qrcode'] = '{type_legend},type,headline,qrcode,qrcode_size,qrcode_margin,qrcode_ecclevel;{image_legend},alt,size,imageUrl,fullsize,imagemargin,floating;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['qrcode'] = '{type_legend},type,headline,qrcode,qrcode_size,qrcode_margin,qrcode_ecclevel;{image_legend},alt,size,imagemargin,imageUrl,fullsize,caption,floating;{protected_legend:hide},protected;{expert_legend:hide},guests,invisible,cssID,space';
 
 /**
  * Add fields to tl_module
